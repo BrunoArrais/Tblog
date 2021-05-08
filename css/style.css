@@ -17,7 +17,7 @@ header{
   font-weight: bold;
   font-size: 20px;
   text-decoration: none;
-  background-color: var(--dark-blue)
+  background-color: var(--dark-blue);
 }
 
 body {
@@ -26,6 +26,7 @@ body {
   grid-template-columns: 2fr 1fr;
   
 }
+
 
 .link-top {
   grid-column: 1/5;
@@ -49,6 +50,8 @@ body {
   padding: 1.5rem;
   grid-column: 1 2;
   margin-left: 5px;
+  width: 940px;
+  height: 1166px;
   
 }
 
@@ -58,13 +61,17 @@ body {
   grid-column: 2/3;
   background-image: url('/Tblog/img/img3.jpeg');
   background-size: cover;
-  margin: 0.5rem;
+  margin: 0rem 0rem 1rem 0rem;
   color: #fff;
   border-radius: 15px;  
   width: 900px;
-  height: 325px;
+  height: 325px
   
-  
+}
+
+.caixa-master,
+.caixa-post{
+  align-items:flex-star;
 }
 
 .text {
@@ -100,11 +107,26 @@ body {
   color: #fff
 }
 
+.caixa-lateral {
+  grid-column: 2;
+  background-color: #fff;
+  margin-left: 10px;
+  list-style: none;
+}
+
+.text-title {
+  color: var(--text-orange);
+  font-weight: bold;
+  font-size: 30px;
+}
+
 .proxima-pagina{
-  grid-column: 1/3;
   text-align: right;
   display: grid;
   grid-column: 2 / 3;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--text-orange);
 }
 
 .comentario-overlay {
@@ -121,7 +143,7 @@ body {
   justify-content: center;
 
   opacity:0;
-  visibility: hidden;
+  visibility: hidden; 
 }
 
 .comentario-overlay.active {
@@ -132,46 +154,57 @@ body {
 #comentarios {
   width: 750px;
   height: 100px;
-  border-: 0.1px black solid;
-  overflow-y: scroll;
+  border: 0.1px black solid;
+  
+  margin: 0 auto;
+
+  display: grid;
+  grid-column: 2 / 3;
+}
+
+.h2-comentarios {
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .caixa-overlay {
   background-color:azure;
   box-sizing: 1800px border-box;
-  
-
-}
+ }
 
 .fechar {
-  align-items:between;
-}
-
-.caixa-lateral {
-  grid-column: 2;
-  background-color: #fff;
-  margin-left: 10px;
-  list-style: none;
-
-  
-}
-
-.text-title {
+  text-decoration: none;
   color: var(--text-orange);
-  font-weight: bold;
-  font-size: 30px;
+  align-items: center;
+  text-align: right;
+  display: grid;
+  grid-column: 2 / 3;
+  padding-top: 0;
 }
 
-@media (min-width: 1040px) and (max-height: 937px) {
-  header {
-    max-width: 1500px
-  }
-  
-  .caixa-master  {
-    max-width: 1040px;
-  }
-
-  .caixa-lateral{
-    max-width: 419px;
-  }
+.box-comentario {
+  display: flex;
+  padding-top: 0;
+  width: 840px;
+  height: 141px;
 }
+
+.foto-e-usuario {
+  padding-top: 0;
+}
+
+#usuario-foto, #usuario-nome{
+  width: 100px;
+  height: 100px;
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
+#usuario-nome{
+  flex-direction: column;
+}
+
+#foto-e-usuario {
+  padding: 0.1rem; 
+}
+
